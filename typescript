@@ -1,0 +1,390 @@
+Script started on Tue 05 Jun 2018 19:15:26 AEST
+]0;jay@jay-HP-ENVY-m6-Notebook-PC: ~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[01;32mjay@jay-HP-ENVY-m6-Notebook-PC[00m:[01;34m~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[00m$ dotnet restore
+[?1h=[?1h=[?1h=  Restore completed in 57.08 ms for /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/RetroVynyl.API.csproj.
+  Restore completed in 38.51 ms for /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/RetroVynyl.API.csproj.
+  Restore completed in 242.44 ms for /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/RetroVynyl.API.csproj.
+  Restore completed in 259.86 ms for /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/RetroVynyl.API.csproj.
+]0;jay@jay-HP-ENVY-m6-Notebook-PC: ~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[01;32mjay@jay-HP-ENVY-m6-Notebook-PC[00m:[01;34m~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[00m$ dotnet ef 
+
+                     [39;49m[39;49m[37m[39;49m[97m_/\__       
+               ---==[39;49m[97m[39;49m[37m[39;49m[97m/    \\      
+         [39;49m[37m[39;49m[35m___  ___   [39;49m[95m[39;49m[37m[39;49m[97m|[39;49m[37m.    [39;49m[97m\|\    
+        [39;49m[37m[39;49m[35m| __|| __|  [39;49m[95m[39;49m[37m[39;49m[97m|  )   \\\   
+        [39;49m[37m[39;49m[35m| _| | _|   [39;49m[95m[39;49m[37m[39;49m[97m\_/ |  //|\\ 
+        [39;49m[37m[39;49m[35m|___||_|       [39;49m[95m[39;49m[37m[39;49m[97m/   \\\/\\[39;49m[37m[39;49m
+
+Entity Framework Core .NET Command Line Tools 2.0.1-rtm-125
+
+Usage: dotnet ef [options] [command]
+
+Options:
+  --version        Show version information
+  -h|--help        Show help information
+  -v|--verbose     Show verbose output.
+  --no-color       Don't colorize output.
+  --prefix-output  Prefix output with level.
+
+Commands:
+  database    Commands to manage the database.
+  dbcontext   Commands to manage DbContext types.
+  migrations  Commands to manage migrations.
+
+Use "dotnet ef [command] --help" for more information about a command.
+]0;jay@jay-HP-ENVY-m6-Notebook-PC: ~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[01;32mjay@jay-HP-ENVY-m6-Notebook-PC[00m:[01;34m~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[00m$ dotnet ef migrations[K[K[K[K[K[K[K[K[K[Kadd-migrat[K[K[K[K[K[K[K[K[K[K[K migrations add initial[K[K[K[K[K[K[KInitialCraet[K[K[Keate[K[K[K[K[K[K[K[K[K[K[K[K[Kinitial
+[?1h=[?1h=[?1h=[?1h=Done. To undo this action, use 'ef migrations remove'
+]0;jay@jay-HP-ENVY-m6-Notebook-PC: ~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[01;32mjay@jay-HP-ENVY-m6-Notebook-PC[00m:[01;34m~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[00m$ dotnet ef database update
+[?1h=[?1h=[?1h=[?1h=System.ArgumentException: Keyword not supported: 'date source'.
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.GetIndex(String keyword)
+   at Microsoft.Data.Sqlite.SqliteConnectionStringBuilder.set_Item(String keyword, Object value)
+   at System.Data.Common.DbConnectionStringBuilder.set_ConnectionString(String value)
+   at Microsoft.Data.Sqlite.SqliteConnection.set_ConnectionString(String value)
+   at Microsoft.Data.Sqlite.SqliteConnection..ctor(String connectionString)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.SqliteRelationalConnection.CreateDbConnection()
+   at Microsoft.EntityFrameworkCore.Internal.LazyRef`1.get_Value()
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.get_DbConnection()
+   at Microsoft.EntityFrameworkCore.Internal.RelationalLoggerExtensions.MigrateUsingConnection(IDiagnosticsLogger`1 diagnostics, IMigrator migrator, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Migrations.Internal.Migrator.Migrate(String targetMigration)
+   at Microsoft.EntityFrameworkCore.Design.Internal.MigrationsOperations.UpdateDatabase(String targetMigration, String contextType)
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.UpdateDatabase.<>c__DisplayClass0_1.<.ctor>b__0()
+   at Microsoft.EntityFrameworkCore.Design.OperationExecutor.OperationBase.Execute(Action action)
+[39;49m[39;49m[31m[39;49m[91mKeyword not supported: 'date source'.[39;49m[31m[39;49m
+]0;jay@jay-HP-ENVY-m6-Notebook-PC: ~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[01;32mjay@jay-HP-ENVY-m6-Notebook-PC[00m:[01;34m~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[00m$ dotnet ef database update
+[?1h=[?1h=[?1h=[?1h=Applying migration '20180605091714_initial'.
+Done.
+]0;jay@jay-HP-ENVY-m6-Notebook-PC: ~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[01;32mjay@jay-HP-ENVY-m6-Notebook-PC[00m:[01;34m~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[00m$ dotnet watch run
+[?1h=[?1h=[39;49m[90mwatch : [39;49mStarted
+[?1h=[?1h=[?1h=[?1h=[?1h=[?1h=[?1h=Application startup exception: System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/jay/Desktop/CSharp/RetroVynyl/Assets/SeedData/RetroVynyl.json'.
+   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks)
+   at System.IO.File.InternalReadAllText(String path, Encoding encoding)
+   at System.IO.File.ReadAllText(String path)
+   at RetroVynyl.API.Data.Seed.SeedAlbums() in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Data/Seed.cs:line 20
+   at RetroVynyl.API.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env, Seed seeder) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Startup.cs:line 40
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+
+Unhandled Exception: System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/jay/Desktop/CSharp/RetroVynyl/Assets/SeedData/RetroVynyl.json'.
+   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks)
+   at System.IO.File.InternalReadAllText(String path, Encoding encoding)
+   at System.IO.File.ReadAllText(String path)
+   at RetroVynyl.API.Data.Seed.SeedAlbums() in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Data/Seed.cs:line 20
+   at RetroVynyl.API.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env, Seed seeder) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Startup.cs:line 40
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at RetroVynyl.API.Program.BuildWebHost(String[] args) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Program.cs:line 21
+   at RetroVynyl.API.Program.Main(String[] args) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Program.cs:line 17
+[41m[1m[37mcrit[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[6]
+      Application startup exception
+System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/jay/Desktop/CSharp/RetroVynyl/Assets/SeedData/RetroVynyl.json'.
+   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   at System.IO.StreamReader..[?1h=[39;49m[90mwatch : [39;49m[39;49m[91mExited with error code 134
+[39;49m[39;49m[90mwatch : [39;49m[39;49m[93mWaiting for a file to change before restarting dotnet...
+[39;49m^C[39;49m[90mwatch : [39;49mShutdown requested. Press Ctrl+C again to force exit.
+
+]0;jay@jay-HP-ENVY-m6-Notebook-PC: ~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[01;32mjay@jay-HP-ENVY-m6-Notebook-PC[00m:[01;34m~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[00m$ ^C
+]0;jay@jay-HP-ENVY-m6-Notebook-PC: ~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[01;32mjay@jay-HP-ENVY-m6-Notebook-PC[00m:[01;34m~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[00m$ ^C
+]0;jay@jay-HP-ENVY-m6-Notebook-PC: ~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[01;32mjay@jay-HP-ENVY-m6-Notebook-PC[00m:[01;34m~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[00m$ cleasr[K[Kr
+[3J[H[2J]0;jay@jay-HP-ENVY-m6-Notebook-PC: ~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[01;32mjay@jay-HP-ENVY-m6-Notebook-PC[00m:[01;34m~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[00m$ dotnet restore
+[?1h=[?1h=[?1h=  Restore completed in 54.23 ms for /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/RetroVynyl.API.csproj.
+  Restore completed in 53.28 ms for /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/RetroVynyl.API.csproj.
+  Restore completed in 56.59 ms for /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/RetroVynyl.API.csproj.
+  Restore completed in 33.23 ms for /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/RetroVynyl.API.csproj.
+]0;jay@jay-HP-ENVY-m6-Notebook-PC: ~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[01;32mjay@jay-HP-ENVY-m6-Notebook-PC[00m:[01;34m~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[00m$ dotnet run
+[?1h=[?1h=[?1h=[?1h=[?1h=[?1h=[?1h=Application startup exception: System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/jay/Desktop/CSharp/RetroVynyl/Assets/SeedData/RetroVynyl.json'.
+   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks)
+   at System.IO.File.InternalReadAllText(String path, Encoding encoding)
+   at System.IO.File.ReadAllText(String path)
+   at RetroVynyl.API.Data.Seed.SeedAlbums() in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Data/Seed.cs:line 19
+   at RetroVynyl.API.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env, Seed seeder) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Startup.cs:line 40
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+
+Unhandled Exception: [41m[1m[37mcrit[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[6]
+      Application startup exception
+System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/jay/Desktop/CSharp/RetroVynyl/Assets/SeedData/RetroVynyl.json'.
+   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks)
+   at System.IO.File.InternalReadAllText(String path, Encoding encoding)
+   at System.IO.File.ReadAllText(String path)
+   at RetroVynyl.API.Data.Seed.SeedAlbums() in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Data/Seed.cs:line 19
+   at RetroVynyl.API.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env, Seed seeder) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Startup.cs:line 40
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/jay/Desktop/CSharp/RetroVynyl/Assets/SeedData/RetroVynyl.json'.
+   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks)
+   at System.IO.File.InternalReadAllText(String path, Encoding encoding)
+   at System.IO.File.ReadAllText(String path)
+   at RetroVynyl.API.Data.Seed.SeedAlbums() in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Data/Seed.cs:line 19
+   at RetroVynyl.API.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env, Seed seeder) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Startup.cs:line 40
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at RetroVynyl.API.Program.BuildWebHost(String[] args) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Program.cs:line 21
+   at RetroVynyl.API.Program.Main(String[] args) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Program.cs:line 17
+]0;jay@jay-HP-ENVY-m6-Notebook-PC: ~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[01;32mjay@jay-HP-ENVY-m6-Notebook-PC[00m:[01;34m~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[00m$ [K]0;jay@jay-HP-ENVY-m6-Notebook-PC: ~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[01;32mjay@jay-HP-ENVY-m6-Notebook-PC[00m:[01;34m~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[00m$ dotnet run
+[?1h=[?1h=[?1h=[?1h=[?1h=[?1h=Application startup exception: System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/jay/Desktop/CSharp/RetroVynyl/Assets/SeedData/RetroVynyl.json'.
+   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks)
+   at System.IO.File.InternalReadAllText(String path, Encoding encoding)
+   at System.IO.File.ReadAllText(String path)
+   at RetroVynyl.API.Data.Seed.SeedAlbums() in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Data/Seed.cs:line 19
+   at RetroVynyl.API.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env, Seed seeder) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Startup.cs:line 40
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+
+Unhandled Exception: [41m[1m[37mcrit[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[6]
+      Application startup exception
+System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/jay/Desktop/CSharp/RetroVynyl/Assets/SeedData/RetroVynyl.json'.
+   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks)
+   at System.IO.File.InternalReadAllText(String path, Encoding encoding)
+   at System.IO.File.ReadAllText(String path)
+   at RetroVynyl.API.Data.Seed.SeedAlbums() in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Data/Seed.cs:line 19
+   at RetroVynyl.API.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env, Seed seeder) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Startup.cs:line 40
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/jay/Desktop/CSharp/RetroVynyl/Assets/SeedData/RetroVynyl.json'.
+   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks)
+   at System.IO.File.InternalReadAllText(String path, Encoding encoding)
+   at System.IO.File.ReadAllText(String path)
+   at RetroVynyl.API.Data.Seed.SeedAlbums() in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Data/Seed.cs:line 19
+   at RetroVynyl.API.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env, Seed seeder) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Startup.cs:line 40
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at RetroVynyl.API.Program.BuildWebHost(String[] args) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Program.cs:line 21
+   at RetroVynyl.API.Program.Main(String[] args) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Program.cs:line 17
+]0;jay@jay-HP-ENVY-m6-Notebook-PC: ~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[01;32mjay@jay-HP-ENVY-m6-Notebook-PC[00m:[01;34m~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[00m$ [K]0;jay@jay-HP-ENVY-m6-Notebook-PC: ~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[01;32mjay@jay-HP-ENVY-m6-Notebook-PC[00m:[01;34m~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[00m$ 
+]0;jay@jay-HP-ENVY-m6-Notebook-PC: ~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[01;32mjay@jay-HP-ENVY-m6-Notebook-PC[00m:[01;34m~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[00m$ 
+]0;jay@jay-HP-ENVY-m6-Notebook-PC: ~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[01;32mjay@jay-HP-ENVY-m6-Notebook-PC[00m:[01;34m~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[00m$ dotnet run
+[?1h=[?1h=[?1h=[?1h=[?1h=[?1h=[?1h=Application startup exception: System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Data/SeedData/RetroVynyl.json'.
+   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks)
+   at System.IO.File.InternalReadAllText(String path, Encoding encoding)
+   at System.IO.File.ReadAllText(String path)
+   at RetroVynyl.API.Data.Seed.SeedAlbums() in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Data/Seed.cs:line 19
+   at RetroVynyl.API.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env, Seed seeder) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Startup.cs:line 40
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+
+Unhandled Exception: [41m[1m[37mcrit[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[6]
+      Application startup exception
+System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Data/SeedData/RetroVynyl.json'.
+   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks)
+   at System.IO.File.InternalReadAllText(String path, Encoding encoding)
+   at System.IO.File.ReadAllText(String path)
+   at RetroVynyl.API.Data.Seed.SeedAlbums() in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Data/Seed.cs:line 19
+   at RetroVynyl.API.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env, Seed seeder) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Startup.cs:line 40
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+System.IO.DirectoryNotFoundException: Could not find a part of the path '/home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Data/SeedData/RetroVynyl.json'.
+   at Interop.ThrowExceptionForIoErrno(ErrorInfo errorInfo, String path, Boolean isDirectory, Func`2 errorRewriter)
+   at Microsoft.Win32.SafeHandles.SafeFileHandle.Open(String path, OpenFlags flags, Int32 mode)
+   at System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks, Int32 bufferSize)
+   at System.IO.StreamReader..ctor(String path, Encoding encoding, Boolean detectEncodingFromByteOrderMarks)
+   at System.IO.File.InternalReadAllText(String path, Encoding encoding)
+   at System.IO.File.ReadAllText(String path)
+   at RetroVynyl.API.Data.Seed.SeedAlbums() in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Data/Seed.cs:line 19
+   at RetroVynyl.API.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env, Seed seeder) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Startup.cs:line 40
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at RetroVynyl.API.Program.BuildWebHost(String[] args) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Program.cs:line 21
+   at RetroVynyl.API.Program.Main(String[] args) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Program.cs:line 17
+]0;jay@jay-HP-ENVY-m6-Notebook-PC: ~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[01;32mjay@jay-HP-ENVY-m6-Notebook-PC[00m:[01;34m~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[00m$ clear
+[3J[H[2J]0;jay@jay-HP-ENVY-m6-Notebook-PC: ~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[01;32mjay@jay-HP-ENVY-m6-Notebook-PC[00m:[01;34m~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[00m$ cleardotnet run
+[?1h=[?1h=[?1h=[?1h=[?1h=[?1h=[?1h=Application startup exception: Newtonsoft.Json.JsonSerializationException: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'System.Collections.Generic.List`1[RetroVynyl.API.Models.Albums]' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'albums', line 2, position 14.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at RetroVynyl.API.Data.Seed.SeedAlbums() in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Data/Seed.cs:line 20
+   at RetroVynyl.API.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env, Seed seeder) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Startup.cs:line 40
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+
+Unhandled Exception: [41m[1m[37mcrit[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[6]
+      Application startup exception
+Newtonsoft.Json.JsonSerializationException: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'System.Collections.Generic.List`1[RetroVynyl.API.Models.Albums]' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'albums', line 2, position 14.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at RetroVynyl.API.Data.Seed.SeedAlbums() in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Data/Seed.cs:line 20
+   at RetroVynyl.API.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env, Seed seeder) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Startup.cs:line 40
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+Newtonsoft.Json.JsonSerializationException: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'System.Collections.Generic.List`1[RetroVynyl.API.Models.Albums]' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'albums', line 2, position 14.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at RetroVynyl.API.Data.Seed.SeedAlbums() in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Data/Seed.cs:line 20
+   at RetroVynyl.API.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env, Seed seeder) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Startup.cs:line 40
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+   at Microsoft.AspNetCore.Hosting.WebHostBuilder.Build()
+   at RetroVynyl.API.Program.BuildWebHost(String[] args) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Program.cs:line 21
+   at RetroVynyl.API.Program.Main(String[] args) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Program.cs:line 17
+]0;jay@jay-HP-ENVY-m6-Notebook-PC: ~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[01;32mjay@jay-HP-ENVY-m6-Notebook-PC[00m:[01;34m~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[00m$ clear
+[3J[H[2J]0;jay@jay-HP-ENVY-m6-Notebook-PC: ~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[01;32mjay@jay-HP-ENVY-m6-Notebook-PC[00m:[01;34m~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[00m$ ditb=[K[K[K[Kotnet.[K run
+[?1h=[?1h=[?1h=[?1h=[?1h=[?1h=[?1h=Hosting environment: Production
+Content root path: /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API
+Now listening on: http://localhost:5000
+Application started. Press Ctrl+C to shut down.
+^CApplication is shutting down...
+^C^C^C
+]0;jay@jay-HP-ENVY-m6-Notebook-PC: ~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[01;32mjay@jay-HP-ENVY-m6-Notebook-PC[00m:[01;34m~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[00m$ 
+]0;jay@jay-HP-ENVY-m6-Notebook-PC: ~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[01;32mjay@jay-HP-ENVY-m6-Notebook-PC[00m:[01;34m~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[00m$ dotnet run
+[?1h=[?1h=[?1h=[?1h=[?1h=[?1h=[?1h=Hosting environment: Production
+Content root path: /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API
+Now listening on: http://localhost:5000
+Application started. Press Ctrl+C to shut down.
+^CApplication is shutting down...
+
+]0;jay@jay-HP-ENVY-m6-Notebook-PC: ~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[01;32mjay@jay-HP-ENVY-m6-Notebook-PC[00m:[01;34m~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[00m$ ^C
+]0;jay@jay-HP-ENVY-m6-Notebook-PC: ~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[01;32mjay@jay-HP-ENVY-m6-Notebook-PC[00m:[01;34m~/Desktop/CSharp/RetroVynyl/RetroVynyl.API[00m$ dotnet run
+[?1h=[?1h=[?1h=[?1h=[?1h=[?1h=Application startup exception: Newtonsoft.Json.JsonSerializationException: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'System.Collections.Generic.List`1[RetroVynyl.API.Models.Albums]' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'albums', line 2, position 14.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at RetroVynyl.API.Data.Seed.SeedAlbums() in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Data/Seed.cs:line 20
+   at RetroVynyl.API.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env, Seed seeder) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Startup.cs:line 40
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+
+Unhandled Exception: [41m[1m[37mcrit[39m[22m[49m: Microsoft.AspNetCore.Hosting.Internal.WebHost[6]
+      Application startup exception
+Newtonsoft.Json.JsonSerializationException: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'System.Collections.Generic.List`1[RetroVynyl.API.Models.Albums]' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'albums', line 2, position 14.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value)
+   at RetroVynyl.API.Data.Seed.SeedAlbums() in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Data/Seed.cs:line 20
+   at RetroVynyl.API.Startup.Configure(IApplicationBuilder app, IHostingEnvironment env, Seed seeder) in /home/jay/Desktop/CSharp/RetroVynyl/RetroVynyl.API/Startup.cs:line 40
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at Microsoft.AspNetCore.Hosting.ConventionBasedStartup.Configure(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.Internal.AutoRequestServicesStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.Internal.WebHost.BuildApplication()
+Newtonsoft.Json.JsonSerializationException: Cannot deserialize the current JSON object (e.g. {"name":"value"}) into type 'System.Collections.Generic.List`1[RetroVynyl.API.Models.Albums]' because the type requires a JSON array (e.g. [1,2,3]) to deserialize correctly.
+To fix this error either change the JSON to a JSON array (e.g. [1,2,3]) or change the deserialized type so that it is a normal .NET type (e.g. not a primitive type like integer, not a collection type like an array or List<T>) that can be deserialized from a JSON object. JsonObjectAttribute can also be added to the type to force it to deserialize from a JSON object.
+Path 'albums', line 2, position 14.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateObject(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.CreateValueInternal(JsonReader reader, Type objectType, JsonContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerMember, Object existingValue)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalReader.Deserialize(JsonReader reader, Type objectType, Boolean checkAdditionalContent)
+   at Newtonsoft.Json.JsonSerializer.DeserializeInternal(JsonReader reader, Type objectType)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject(String value, Type type, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObject[T](String value, JsonSerializerSettings settings)
+   at Newtonsoft.Json.JsonConvert.DeserializeObj
