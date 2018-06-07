@@ -1,5 +1,7 @@
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using RetroVynyl.API.Data;
 
 namespace RetroVynyl.API.Controllers
@@ -14,17 +16,17 @@ namespace RetroVynyl.API.Controllers
         }
 
         [HttpGet]
-        public IActionResult GetAlbums()
+        public async Task<IActionResult> GetAlbumsAsync()
         {
-            var albums = _context.Albums.ToList();
+            var albums = await _context.Albums.ToListAsync();
 
             return Ok(albums);
         }
-
+        [Route("api/[controller]/{id}")]
         [HttpGet("{id}")]
-        public IActionResult GetAlbum(int id)
+        public async Task<IActionResult> GetAlbumAsync(int id)
         {
-            var album = _context.Albums.FirstOrDefault(x => x.Id == id);
+            var album = await _context.Albums.FirstOrDefaultAsync(x => x.Id == id);
 
             return Ok(album);
         }
