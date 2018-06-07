@@ -28,7 +28,9 @@ namespace RetroVynyl.API
             services.AddDbContext<DataContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
             // services.AddTransient<Seed>();
             services.AddMvc();
+            //enable cross-origin-requests between API(Port:5000)<->SPA(Port:4200)
             services.AddCors();
+            services.AddScoped<IAuthRepository, AuthRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
