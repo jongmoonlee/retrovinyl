@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace RetroVynyl.API.Controllers
@@ -9,13 +10,14 @@ namespace RetroVynyl.API.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
+        // [Authorize]
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
-
+        [AllowAnonymous]
         // GET api/values/5
         [HttpGet("{id}")]
         public string Get(int id)
