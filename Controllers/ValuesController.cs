@@ -10,12 +10,12 @@ namespace RetroVynyl.API.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
-        // [Authorize]
+        [Authorize]
         // GET api/values
         [HttpGet]
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "value1", "valueff2" };
         }
         [AllowAnonymous]
         // GET api/values/5

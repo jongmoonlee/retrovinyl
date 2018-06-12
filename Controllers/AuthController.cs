@@ -8,6 +8,7 @@ using RetroVynyl.API.Dtos;
 using RetroVynyl.API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.Extensions.Configuration;
 
 namespace RetroVynyl.API.Controllers
 {
@@ -15,10 +16,12 @@ namespace RetroVynyl.API.Controllers
     public class AuthController : Controller
     {
         private readonly IAuthRepository _repo;
+        private readonly IConfiguration _config;
 
-        public AuthController(IAuthRepository repo)
+        public AuthController(IAuthRepository repo, IConfiguration config)
         {
             _repo = repo;
+            _config = config;
         }
 
         [HttpPost("register")]
@@ -56,7 +59,7 @@ namespace RetroVynyl.API.Controllers
             
             //generate token
             var tokenHandler = new JwtSecurityTokenHandler();
-            var key = Encoding.ASCII.GetBytes("super secret key");
+            var key = Encoding.ASCII.GetBytes(_config.GetSection("AppSettings:Token").Value);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new Claim[]
