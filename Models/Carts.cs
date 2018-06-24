@@ -1,8 +1,13 @@
+
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+
 namespace RetroVynyl.API.Models
 {
-    public class Albums
+    public class Carts
     {
-        public int Id { get; set; }
+       public int Id { get; set; } 
+       public int Quatity { get; set; }
         public string Name { get; set; }
         public string Artist { get; set; }
         public string Content { get; set; }
@@ -11,6 +16,6 @@ namespace RetroVynyl.API.Models
         public int Rank { get; set; }
         public int Stock { get; set; }
         public int Year { get; set; }
-      
+
     }
 }

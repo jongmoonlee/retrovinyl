@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,8 +34,11 @@ namespace RetroVynyl.API
             // services.AddTransient<Seed>();
             services.AddMvc();
             //enable cross-origin-requests between API(Port:5000)<->SPA(Port:4200)
-            services.AddCors();
+            services.AddCors();   
+            services.AddAutoMapper();   
             services.AddScoped<IAuthRepository, AuthRepository>();
+            //add retro-repo
+            services.AddScoped<IRetroVynylRepository, RetroVynylRepository>();
             //add auth
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options => {

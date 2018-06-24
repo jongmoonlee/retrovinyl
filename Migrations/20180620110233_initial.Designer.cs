@@ -10,8 +10,8 @@ using System;
 namespace RetroVynyl.API.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20180607093927_AddedUserModel")]
-    partial class AddedUserModel
+    [Migration("20180620110233_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -43,6 +43,34 @@ namespace RetroVynyl.API.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Albums");
+                });
+
+            modelBuilder.Entity("RetroVynyl.API.Models.Carts", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Artist");
+
+                    b.Property<string>("Content");
+
+                    b.Property<string>("ImgUrl");
+
+                    b.Property<string>("Name");
+
+                    b.Property<double>("Price");
+
+                    b.Property<int>("Quatity");
+
+                    b.Property<int>("Rank");
+
+                    b.Property<int>("Stock");
+
+                    b.Property<int>("Year");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Carts");
                 });
 
             modelBuilder.Entity("RetroVynyl.API.Models.User", b =>
