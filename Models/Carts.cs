@@ -1,7 +1,3 @@
-
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-
 namespace RetroVynyl.API.Models
 {
     public class Carts
@@ -16,6 +12,5 @@ namespace RetroVynyl.API.Models
         public int Rank { get; set; }
         public int Stock { get; set; }
         public int Year { get; set; }
-
     }
 }

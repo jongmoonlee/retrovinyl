@@ -11,5 +11,8 @@ namespace RetroVynyl.API.Data
          Task<bool> saveAll();
          Task<IEnumerable<User>> GetUsers();
          Task<User> GetUser(int id);
+        Task<Carts> Carts { get; }
+
+        Task<Carts> GetCart(int id);
     }
 }

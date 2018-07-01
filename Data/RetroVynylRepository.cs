@@ -9,6 +9,8 @@ namespace RetroVynyl.API.Data
     {
         private readonly DataContext _context;
 
+        public Task<Carts> Carts => throw new System.NotImplementedException();
+
         public RetroVynylRepository(DataContext context)
         {
             _context = context;
@@ -51,5 +53,6 @@ namespace RetroVynyl.API.Data
         {
            return await _context.SaveChangesAsync() > 0;
         }
+        
     }
 }
